@@ -27,4 +27,13 @@ For this reason, this code cleaner script will take your un indented C program a
     }
     
 After indentation the code is supposed to look like the above version. <br/>
+
+The main code has been written in Python and is in the apps folder. There's also a test code written in C(test.c)<br/>
+
+Run the program by going into the app directory after cloning and then type:
+
+        python3 main.py
+        
+This will run the program and ask you for typing in the name of the file which you want to indent properly. You can type `test.c`
+to check whether the code runs or not!
     
