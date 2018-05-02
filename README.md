@@ -30,6 +30,8 @@ After indentation the code is supposed to look like the above version. <br/>
 
 The main code has been written in Python and is in the apps folder. There's also a test code written in C(test.c)<br/>
 
+Currently this program can indent files and execute them directly for you!<br/>
+
 Before running the program, make sure that you've compiled your program and give the name of the executable(or .o file) when asked to do so.<br/>
 Run the program by going into the app directory after cloning and then type:
 
