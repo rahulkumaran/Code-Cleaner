@@ -28,16 +28,16 @@ def code_cleaner(filename):
 
 		#print count_close, count_open
 
-		if((count_close - count_open) > 0):
+		if((count_close - count_open) > 0):		#Checking if } more than {
 			print("Looks like you have more number of \"}\" somewhere")
-		if((count_close - count_open) < 0):
+		if((count_close - count_open) < 0):		#Checking if { more than }
 			print("Looks like you have more number of \"{\" somewhere")
 		return count
-	except IOError:
+	except IOError:		#If wrong file name gives
 		print("Sorry, but no such file exists in your current working directory")
 
 def code_execute(filename):
-	compile_command = "gcc " + filename + " -o " + filename[0:(len(filename)-2)]	
-	os.system(compile_command)
-	exec_file = "./"+filename[0:(len(filename)-2)]
-	subprocess.call([exec_file])
+	compile_command = "gcc " + filename + " -o " + filename[0:(len(filename)-2)]	#Command for compiling with gcc along with filename and executable name
+	os.system(compile_command)		#Running the above command from script to compile the code
+	exec_file = "./"+filename[0:(len(filename)-2)]	#To execute file
+	subprocess.call([exec_file])		#To execute the code
