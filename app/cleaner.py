@@ -1,5 +1,4 @@
 import os
-import subprocess
 
 def code_cleaner(filename):
 	try:
