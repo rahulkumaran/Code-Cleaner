@@ -1,4 +1,7 @@
 import os
+import subprocess
+import syntaxdb
+
 
 def code_cleaner(filename):
 	try:
@@ -39,4 +42,9 @@ def code_execute(filename):
 	compile_command = "gcc " + filename + " -o " + filename[0:(len(filename)-2)]	#Command for compiling with gcc along with filename and executable name
 	os.system(compile_command)		#Running the above command from script to compile the code
 	exec_file = "./"+filename[0:(len(filename)-2)]	#To execute file
-	os.system(exec_file)		#To execute the code
+	os.system(exec_file)
+
+def syntax_lookup(user_choice, user_search, user_language):
+	syntax = syntaxdb.Syntaxdb(choice = user_choice, search_query = user_search, language = user_language)
+	data = syntax.getContent()
+	return data
